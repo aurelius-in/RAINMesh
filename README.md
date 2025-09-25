@@ -47,13 +47,13 @@ Multi-Tenant RAG (Federated / Late-Bound Retrieval)
 
             ┌────────────────────────────────────────────────────────┐
             │                    CONTROL PLANE                       │
-            │  Tenant Registry • Content Packs • Eval Harness       │
-            │  Policy (OPA) • Telemetry/Billing • Feature Flags     │
+            │  Tenant Registry • Content Packs • Eval Harness        │
+            │  Policy (OPA) • Telemetry/Billing • Feature Flags      │
             └────────────────────────────────────────────────────────┘
                                    │
                                    ▼
 ┌──────────┐   TLS/JWT   ┌──────────────┐   policy/ABAC   ┌───────────────┐
-│  Client  │ ───────────▶│ API Gateway  │ ───────────────▶│ Orchestrator  │
+│  Client  │ ──────── ──▶│ API Gateway │ ───────────────▶│ Orchestrator  │
 │ (UI/SDK) │             │  (AuthN/Z)   │                 │  (LangGraph)  │
 └──────────┘             └──────────────┘                 └─────┬─────────┘
                                                                 │
@@ -72,18 +72,18 @@ Multi-Tenant RAG (Federated / Late-Bound Retrieval)
                     └──────────────┬───────────┴───────────────┬───────────────────┘
                                    ▼                           ▼
                               ┌────────────────────────────────────────────┐
-                              │   Aggregator • Dedup • Re-rank (CrossEnc) │
+                              │   Aggregator • Dedup • Re-rank (CrossEnc)  │
                               └───────────────────────┬────────────────────┘
                                                       ▼
                                       ┌────────────────────────────────┐
-                                      │  Guarded Generation (LLM)     │
-                                      │  Grounding + Citations        │
-                                      │  PII-aware Redaction          │
+                                      │  Guarded Generation (LLM)      │
+                                      │  Grounding + Citations         │
+                                      │  PII-aware Redaction           │
                                       └───────────────┬────────────────┘
                                                       ▼
                                       ┌────────────────────────────────┐
-                                      │  Answer + Evidence + Signed   │
-                                      │  Retrieval/Policy Log (WORM)  │
+                                      │  Answer + Evidence + Signed    │
+                                      │  Retrieval/Policy Log (WORM)   │
                                       └────────────────────────────────┘
 ```
 
