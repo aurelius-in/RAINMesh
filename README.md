@@ -1,6 +1,6 @@
-# RAINMesh
+![RAIN Arcade Logo](RAINarcade.png)
 
-**Multi-tenant, federated RAG with policy-enforced retrieval and signed evidence logs.**
+# *Multi-tenant, federated RAG with policy-enforced retrieval and signed evidence logs.*
 
 > Production-ready backend for retrieval over distributed sources without centralizing data. Ships with agents for planning, policy explanation, provenance, freshness, redaction, re-ranking, verification, cost control, drift monitoring, and CDC-driven freshness.
 
